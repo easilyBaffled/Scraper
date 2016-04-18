@@ -55,6 +55,9 @@ class Scraper extends Component {
   }
 
   _acceptSelection = () => {
+    console.log(this.state.targetPath);
+    console.log(document.querySelector(this.state.targetPath));
+    console.log(document.querySelector(this.state.targetPath).innerText);
     socket.emit('selection', { path: this.state.targetPath, text: document.querySelector(this.state.targetPath).innerText, url: window.location.href});
     location.reload();
   }

@@ -1,5 +1,5 @@
 {
-  "name": "DOM Scraper",
+  "name": "dom-Scraper",
   "version": "0.1.0",
   "description": "Proof of concept. Scrape an element with a chrome extension, then see the ressults at rwm.herokuapp.com",
   "babel": {
@@ -10,7 +10,7 @@
     ]
   },
   "scripts": {
-    "babel": "browserify content_script.js  -o content-script-compiled.js -t [ babelify --presets [ es2015 react stage-0] ]",
+    "babel": "browserify content_script.js  -o content-script-compiled.js -t [ babelify --presets [ es2015 react stage-0] ]"
   },
   "author": "",
   "license": "ISC",

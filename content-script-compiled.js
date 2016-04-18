@@ -30,7 +30,10 @@ var Scraper = function (_Component) {
     var _this = _possibleConstructorReturn(this, Object.getPrototypeOf(Scraper).call(this, props));
 
     _this._acceptSelection = function () {
-      socket.emit('selection', { path: _this.state.targetPath, text: document.querySelector(_this.state.targetPath), url: window.location.href });
+      console.log(_this.state.targetPath);
+      console.log(document.querySelector(_this.state.targetPath));
+      console.log(document.querySelector(_this.state.targetPath).innerText);
+      socket.emit('selection', { path: _this.state.targetPath, text: document.querySelector(_this.state.targetPath).innerText, url: window.location.href });
       location.reload();
     };
 
@@ -164,32 +167,6 @@ var elemDiv = document.createElement('div');
 elemDiv.id = 'reactAnchor';
 document.body.appendChild(elemDiv);
 _react2.default.render(_react2.default.createElement(Scraper, null), document.getElementById('reactAnchor'));
-
-// let selectorMode = false;
-
-// document.onkeydown = (keyEvent) => {
-//   if (keyEvent.ctrlKey && keyEvent.keyCode === 65 && selectorMode) {
-//     selectorMode = false;
-//     location.reload();
-//   } else if (keyEvent.ctrlKey && keyEvent.keyCode === 65 && !selectorMode) {
-//     selectorMode = true;
-//     document.body.style.border = '10px solid gold';
-//     document.onmousemove = (event) => {
-//       const target = event.target;
-//       const targetStyle = target.style;
-//       target.style.outline = '2px solid gold';
-//       target.onclick = (clickEvent) => {
-//         clickEvent.preventDefault();
-//         clickEvent.stopPropagation();
-//         console.log(clickEvent.target.innerText, cssPath(clickEvent.target));
-//         console.log(document.querySelector(cssPath(clickEvent.target)).innerText);
-//       };
-//       target.onmouseout = () => {
-//         target.style = targetStyle;
-//       };
-//     };
-//   }
-// };
 
 },{"react":157,"socket.io-client/socket.io":2}],2:[function(require,module,exports){
 (function (global){
