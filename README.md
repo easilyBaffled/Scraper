@@ -1,4 +1,7 @@
 # Scraper
+
+[![Greenkeeper badge](https://badges.greenkeeper.io/easilyBaffled/Scraper.svg)](https://greenkeeper.io/)
+
 Inspired by Kimono Labs, this is a proof of concept chrome extension that lets users select and repeatedly pull data from any webpage.
 
 
